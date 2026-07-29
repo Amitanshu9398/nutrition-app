@@ -72,6 +72,7 @@ function LoginForm() {
               <label htmlFor="password" className="text-sm font-medium">
                 Password
               </label>
+
               <Link
                 href="/forgot-password"
                 className="text-xs text-primary hover:underline"
@@ -115,7 +116,7 @@ function LoginForm() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="min-h-screen" />}>
       <LoginForm />
     </Suspense>
   );

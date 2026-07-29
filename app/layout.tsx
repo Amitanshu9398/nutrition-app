@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const displayFont = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["500", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
   title: {
-    default: "NutriIntake — Client Intake, Simplified",
-    template: "%s · NutriIntake",
+    default: "Fuel Lab — Data-Driven Nutrition Coaching | by SikdarAmitanshu",
+    template: "%s · Fuel Lab",
   },
   description:
-    "A beautiful, secure intake wizard for nutrition clients — with a dashboard built for practitioners.",
+    "Fuel Lab is data-driven nutrition coaching by SikdarAmitanshu — science-backed plans, real accountability, real results.",
   openGraph: {
-    title: "NutriIntake — Client Intake, Simplified",
+    title: "Fuel Lab — Data-Driven Nutrition Coaching",
     description:
-      "A beautiful, secure intake wizard for nutrition clients — with a dashboard built for practitioners.",
+      "Science-backed nutrition coaching by SikdarAmitanshu. Submit your intake and start training your nutrition like you train everything else.",
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -25,8 +31,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <body className={`${inter.variable} ${displayFont.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>
       </body>

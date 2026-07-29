@@ -24,7 +24,7 @@ export async function sendSubmissionEmails(params: {
   if (notifyTo.length) {
     tasks.push(
       resend.emails.send({
-        from: process.env.EMAIL_FROM || "NutriIntake <onboarding@resend.dev>",
+        from: process.env.EMAIL_FROM || "Fuel Lab <onboarding@resend.dev>",
         to: notifyTo,
         subject: `New intake: ${params.clientName}`,
         html: nutritionistNotificationEmail({
@@ -39,7 +39,7 @@ export async function sendSubmissionEmails(params: {
   if (params.clientEmail) {
     tasks.push(
       resend.emails.send({
-        from: process.env.EMAIL_FROM || "NutriIntake <onboarding@resend.dev>",
+        from: process.env.EMAIL_FROM || "Fuel Lab <onboarding@resend.dev>",
         to: params.clientEmail,
         subject: "We received your intake form",
         html: clientConfirmationEmail({ clientName: params.clientName }),

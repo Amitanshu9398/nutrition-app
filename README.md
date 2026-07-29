@@ -1,4 +1,6 @@
-# NutriIntake
+# Fuel Lab
+
+*by SikdarAmitanshu — data-driven nutrition coaching*
 
 A production-oriented nutrition client intake wizard + practitioner dashboard, built on
 Next.js 15 (App Router), Supabase, and Tailwind.

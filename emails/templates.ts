@@ -7,14 +7,14 @@ function shell(title: string, body: string) {
         <tr><td align="center">
           <table width="480" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
             <tr><td style="background:#10b981;padding:24px 32px;">
-              <span style="color:#ffffff;font-size:18px;font-weight:700;">NutriIntake</span>
+              <span style="color:#ffffff;font-size:18px;font-weight:700;">Fuel Lab</span>
             </td></tr>
             <tr><td style="padding:32px;">
               <h1 style="margin:0 0 12px;font-size:20px;color:#111827;">${title}</h1>
               ${body}
             </td></tr>
             <tr><td style="padding:20px 32px;background:#f9fafb;">
-              <span style="font-size:12px;color:#9ca3af;">You're receiving this because you use NutriIntake.</span>
+              <span style="font-size:12px;color:#9ca3af;">You're receiving this because you use Fuel Lab.</span>
             </td></tr>
           </table>
         </td></tr>
